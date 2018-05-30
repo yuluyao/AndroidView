@@ -19,23 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private Handler mHandler = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(Message msg) {
-
-
-
-            return false;
-        }
-    });
-
-    private class MyHandler extends Handler {
-        @Override
-        public void handleMessage(Message msg) {
-
-            super.handleMessage(msg);
-        }
-    }
 
 
 }
