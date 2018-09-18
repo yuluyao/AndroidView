@@ -20,7 +20,7 @@
  * WebSite: http://www.gcssloop.com
  */
 
-package com.capsule.exview.rc;
+package com.yuluyao.exv.rc;
 
 public interface RCAttrs {
     void setClipBackground(boolean clipBackground);

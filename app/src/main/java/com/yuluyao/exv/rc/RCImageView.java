@@ -13,39 +13,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Last modified 2018-04-13 23:18:56
+ * Last modified 2018-04-15 22:59:54
  *
  * GitHub: https://github.com/GcsSloop
  * WeiBo: http://weibo.com/GcsSloop
  * WebSite: http://www.gcssloop.com
  */
 
-package com.capsule.exview.rc;
+package com.yuluyao.exv.rc;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.Checkable;
-import android.widget.RelativeLayout;
-
+import android.widget.ImageView;
 
 /**
- * 作用：圆角相对布局
+ * 作用：圆角图片
  * 作者：GcsSloop
  */
-public class RCRelativeLayout extends RelativeLayout implements Checkable, RCAttrs {
+@SuppressLint("AppCompatCustomView")
+public class RCImageView extends ImageView implements Checkable, RCAttrs {
+
     RCHelper mRCHelper;
 
-    public RCRelativeLayout(Context context) {
+    public RCImageView(Context context) {
         this(context, null);
     }
 
-    public RCRelativeLayout(Context context, AttributeSet attrs) {
+    public RCImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public RCRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public RCImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mRCHelper = new RCHelper();
         mRCHelper.initAttrs(context, attrs);
@@ -55,14 +57,6 @@ public class RCRelativeLayout extends RelativeLayout implements Checkable, RCAtt
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         mRCHelper.onSizeChanged(this, w, h);
-    }
-
-    @Override
-    protected void dispatchDraw(Canvas canvas) {
-        canvas.saveLayer(mRCHelper.mLayer, null, Canvas.ALL_SAVE_FLAG);
-        super.dispatchDraw(canvas);
-        mRCHelper.onClipDraw(canvas);
-        canvas.restore();
     }
 
     @Override
@@ -76,6 +70,14 @@ public class RCRelativeLayout extends RelativeLayout implements Checkable, RCAtt
         } else {
             super.draw(canvas);
         }
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        canvas.saveLayer(mRCHelper.mLayer, null, Canvas.ALL_SAVE_FLAG);
+        super.onDraw(canvas);
+        mRCHelper.onClipDraw(canvas);
+        canvas.restore();
     }
 
     @Override
@@ -94,6 +96,7 @@ public class RCRelativeLayout extends RelativeLayout implements Checkable, RCAtt
         }
         return super.dispatchTouchEvent(ev);
     }
+
 
     //--- 公开接口 ----------------------------------------------------------------------------------
 

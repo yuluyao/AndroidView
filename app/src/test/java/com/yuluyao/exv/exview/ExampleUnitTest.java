@@ -1,4 +1,4 @@
-package com.capsule.exview.exview;
+package com.yuluyao.exv.exview;
 
 import org.junit.Test;
 

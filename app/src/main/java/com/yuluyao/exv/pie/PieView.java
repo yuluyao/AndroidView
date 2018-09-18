@@ -1,4 +1,4 @@
-package com.capsule.exview.dot;
+package com.yuluyao.exv.pie;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.capsule.exview.pie.PieData;
+import com.yuluyao.exv.pie.PieData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
  * Created by yuluyao on 2018/1/19.
  */
 
-public class DotView extends View {
+public class PieView extends View {
 
     private Paint mPaint;
     private int mWidth;
@@ -34,15 +34,15 @@ public class DotView extends View {
     private List<PieData> mData = new ArrayList<>();
 
 
-    public DotView(Context context) {
+    public PieView(Context context) {
         this(context, null, 0);
     }
 
-    public DotView(Context context, @Nullable AttributeSet attrs) {
+    public PieView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public DotView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PieView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
         initData();

@@ -20,7 +20,7 @@
  * WebSite: http://www.gcssloop.com
  */
 
-package com.capsule.exview.rc;
+package com.yuluyao.exv.rc;
 
 
 import android.content.Context;
@@ -39,7 +39,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Checkable;
 
-import com.capsule.exview.R;
+import com.yuluyao.exv.R;
 
 import java.util.ArrayList;
 

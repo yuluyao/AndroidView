@@ -1,4 +1,4 @@
-package com.capsule.exview.exview;
+package com.yuluyao.exv.exview;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
