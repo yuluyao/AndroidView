@@ -1,4 +1,4 @@
-package com.capsule.exview;
+package com.capsule.exview.pie;
 
 public class PieData {
 

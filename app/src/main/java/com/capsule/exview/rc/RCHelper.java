@@ -20,7 +20,7 @@
  * WebSite: http://www.gcssloop.com
  */
 
-package com.capsule.exview;
+package com.capsule.exview.rc;
 
 
 import android.content.Context;
@@ -38,6 +38,8 @@ import android.graphics.Region;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Checkable;
+
+import com.capsule.exview.R;
 
 import java.util.ArrayList;
 
