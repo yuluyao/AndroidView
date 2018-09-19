@@ -12,11 +12,11 @@
       <!--android:background="#16ff00ff"-->
       <!--/>-->
 
-    <com.yuluyao.exv.canvas.ClockView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/clockView"
-      />
+    <!--<com.yuluyao.exv.canvas.ClockView-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:id="@+id/clockView"-->
+      <!--/>-->
 
 
 </LinearLayout>
