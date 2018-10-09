@@ -72,8 +72,10 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this@MainActivity, "click ${adapter.menus[position].title}",
           Toast.LENGTH_SHORT).show()
       }
-
     })
+
+
+
   }
 
 
