@@ -3,7 +3,7 @@ package com.yuluyao.exv.dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.support.v4.app.DialogFragment
+import androidx.fragment.app.DialogFragment
 import android.view.*
 import com.yuluyao.exv.R
 
@@ -18,18 +18,18 @@ abstract class BaseBottomDialog : DialogFragment() {
   }
 
   private fun initWindowParam() {
-    val window = dialog.window
+    val window = dialog?.window
     // 背景图设为透明,同时去掉了 padding 属性
-    window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+    window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     // 不使下层视图变暗
-    window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+    window?.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
     // 视图位于底部
-    window.setGravity(Gravity.BOTTOM)
+    window?.setGravity(Gravity.BOTTOM)
 
-    val lp = window.attributes
+    val lp = window?.attributes
     // 宽度占满
-    lp.width = WindowManager.LayoutParams.MATCH_PARENT
-    window.attributes = lp
+    lp?.width = WindowManager.LayoutParams.MATCH_PARENT
+    window?.attributes = lp
   }
 }
 
