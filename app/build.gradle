@@ -27,4 +27,7 @@ dependencies {
     implementation 'com.github.vegetayu:bamboo:0.2.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.5.15'
+    implementation 'com.mrkj.sm:sm_picker:1.2.10@aar'
 }

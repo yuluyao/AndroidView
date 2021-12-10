@@ -1,14 +1,13 @@
 package com.yuluyao.exv
 
-import android.graphics.Rect
-import android.graphics.Region
+import android.content.Context
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,10 +15,19 @@ class MainActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
     setContentView(R.layout.activity_main)
 
-    recyclerView.layoutManager = LinearLayoutManager(this)
+//    iv.setImageResource(R.drawable.meitu_test_1)
 
+//    recyclerView.layoutManager = LinearLayoutManager(this)
+//    getSystemService(Context.POWER_SERVICE)
+
+
+//    if (img.drawable is Animatable) {
+//      val drawable = img.drawable as Animatable
+//      drawable.start()
+//    }
 
 //    val gestureDetector = object : GestureDetector.SimpleOnGestureListener() {
 ////      override fun onSingleTapConfirmed(e: MotionEvent?): Boolean {
@@ -60,19 +68,19 @@ class MainActivity : AppCompatActivity() {
 //    })
 
 
-    val adapter = Adapter()
-    adapter.menus = arrayListOf(
-      MenuItem("canvas"),
-      MenuItem("paint")
-    )
-    recyclerView.adapter = adapter
-
-    recyclerView.addOnItemTouchListener(object : OnItemClickListener() {
-      override fun onItemClicked(position: Int) {
-        Toast.makeText(this@MainActivity, "click ${adapter.menus[position].title}",
-          Toast.LENGTH_SHORT).show()
-      }
-    })
+//    val adapter = Adapter()
+//    adapter.menus = arrayListOf(
+//      MenuItem("canvas"),
+//      MenuItem("paint")
+//    )
+//    recyclerView.adapter = adapter
+//
+//    recyclerView.addOnItemTouchListener(object : OnItemClickListener() {
+//      override fun onItemClicked(position: Int) {
+//        Toast.makeText(this@MainActivity, "click ${adapter.menus[position].title}",
+//          Toast.LENGTH_SHORT).show()
+//      }
+//    })
 
 
 

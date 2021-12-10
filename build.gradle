@@ -5,6 +5,7 @@ buildscript {
 
     repositories {
         google()
+        maven { url "http://47.104.143.146:8123/repository/smapp/" }
         jcenter()
     }
     dependencies {
@@ -20,6 +21,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "http://47.104.143.146:8123/repository/smapp/" }
         maven {url 'https://jitpack.io'}
     }
 }
